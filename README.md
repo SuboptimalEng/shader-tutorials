@@ -1,2 +1,2 @@
-# shader-tutorials
-🎨 The code for my shader tutorials on YouTube.
+# 🎨 Shader Tutorials
+The code for my shader tutorials on YouTube.

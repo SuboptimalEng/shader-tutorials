@@ -14,28 +14,24 @@ void main() {
   // lightColor, lightSource, normal, diffuseStrength
   vec3 normal = normalize(v_normal.xyz);
   vec3 lightColor = vec3(1.0, 1.0, 1.0); // color - white
-  lightColor = red;
-  lightColor = green;
   vec3 lightSource = vec3(1.0, 0.0, 0.0); // coord - (1, 0, 0)
   float diffuseStrength = max(0.0, dot(lightSource, normal));
   vec3 diffuse = diffuseStrength * lightColor;
 
   // diffuse light left
-  vec3 lightColor2 = vec3(1.0, 1.0, 1.0); // color - white
-  lightColor2 = red;
-  vec3 lightSource2 = vec3(-1.0, 0.0, 0.0); // coord - (1, 0, 0)
-  float diffuseStrength2 = max(0.0, dot(lightSource2, normal));
-  vec3 diffuse2 = diffuseStrength2 * lightColor2;
+  // vec3 lightColor2 = vec3(1.0, 0.0, 0.0); // color - red
+  // vec3 lightSource2 = vec3(-1.0, 0.0, 0.0); // coord - (-1, 0, 0)
+  // float diffuseStrength2 = max(0.0, dot(lightSource2, normal));
+  // vec3 diffuse2 = diffuseStrength2 * lightColor2;
 
   // lighting = ambient + diffuse + specular
   vec3 lighting = ambient;
-  lighting = ambient * 0.0 + diffuse + diffuse2;
+  lighting = ambient * 0.0 + diffuse;
+  // lighting = ambient * 0.0 + diffuse + diffuse2;
 
   // color = modelColor * lighting
   vec3 modelColor = vec3(1.0, 1.0, 1.0);
   vec3 color = modelColor * lighting;
-
-  color = pow(color, vec3(1.0 / 2.2));
 
   gl_FragColor = vec4(color, 1.0);
 }

@@ -3,10 +3,6 @@ precision lowp float;
 varying vec4 v_normal;
 
 void main() {
-  vec3 red = vec3(1.0, 0.0, 0.0);
-  vec3 green = vec3(0.0, 1.0, 0.0);
-  vec3 white = vec3(1.0, 1.0, 1.0);
-
   // ambient lighting (global illuminance)
   vec3 ambient = vec3(0.5, 0.5, 0.5);
 

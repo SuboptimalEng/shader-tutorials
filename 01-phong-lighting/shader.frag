@@ -4,7 +4,7 @@ varying vec4 v_normal;
 
 void main() {
   // ambient lighting (global illuminance)
-  vec3 ambient = vec3(0.5, 0.5, 0.5); // grey
+  vec3 ambient = vec3(0.5, 0.5, 0.5); // color - grey
 
   // diffuse (lambertian) lighting
   // lightColor, lightSource, normal, diffuseStrength
@@ -20,7 +20,7 @@ void main() {
   vec3 viewSource = normalize(cameraSource);
   vec3 reflectSource = normalize(reflect(-lightSource, normal));
   float specularStrength = max(0.0, dot(viewSource, reflectSource));
-  specularStrength = pow(specularStrength, 64.0);
+  specularStrength = pow(specularStrength, 256.0);
   vec3 specular = specularStrength * lightColor;
 
   // lighting = ambient + diffuse + specular
@@ -31,7 +31,7 @@ void main() {
   lighting = ambient * 0.0 + diffuse * 0.5 + specular * 0.5;
 
   // color = modelColor * lighting
-  vec3 modelColor = vec3(1.0, 1.0, 1.0); // color - white
+  vec3 modelColor = vec3(0.75, 0.75, 0.75);
   vec3 color = modelColor * lighting;
 
   gl_FragColor = vec4(color, 1.0);

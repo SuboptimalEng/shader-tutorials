@@ -24,7 +24,7 @@ void main() {
   // vec3 specular = specularStrength * lightColor;
 
   // lighting = ambient + diffuse + specular
-  vec3 lighting = vec3(0.0, 0.0, 0.0); // color - black
+  vec3 lighting = vec3(1.0, 1.0, 1.0); // color - white
   // lighting = ambient;
   // lighting = ambient * 0.0 + diffuse;
   // lighting = ambient * 0.0 + diffuse * 0.0 + specular;

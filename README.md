@@ -4,7 +4,7 @@ The code for my shader tutorials on YouTube.
 
 ## Setup Guide
 
-- [How to Write GLSL Shaders in VS Code - YouTube Video](https://www.youtube.com/watch?v=7UvpTTEE1Hs)
+- [YT Video - How to Write GLSL Shaders in VS Code](https://www.youtube.com/watch?v=7UvpTTEE1Hs)
 
 ## Resources
 

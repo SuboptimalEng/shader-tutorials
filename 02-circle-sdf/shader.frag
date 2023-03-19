@@ -26,6 +26,7 @@ void main() {
 
   // note: draw circle sdf
   float radius = 2.5;
+  float radius = 3.0;
   vec2 center = vec2(0.0, 0.0);
   // center = vec2(sin(2.0 * u_time), 0.0);
   float distanceToCircle = sdfCircle(uv - center, radius);
@@ -36,6 +37,8 @@ void main() {
   // color = color * exp(2.0 * distanceToCircle);
   // color = color * exp(-2.0 * abs(distanceToCircle));
   color = color * (1.0 - exp(-2.0 * abs(distanceToCircle)));
+  // color = color * (1.0 - exp(-5.0 * abs(distanceToCircle)));
+  // color = color * (1.0 - exp(-5.0 * abs(distanceToCircle)));
 
   // note: adding waves
   // color = color * 0.8 + color * 0.2;

@@ -19,9 +19,10 @@ void main() {
   // note: set up basic colors
   vec3 black = vec3(0.0);
   vec3 white = vec3(1.0);
+  vec3 red = vec3(1.0, 0.0, 0.0);
   vec3 blue = vec3(0.65, 0.85, 1.0);
   vec3 orange = vec3(0.9, 0.6, 0.3);
-  vec3 color = blue;
+  vec3 color = red;
   // color = vec3(uv.x, uv.y, 0.0);
 
   // note: draw circle sdf

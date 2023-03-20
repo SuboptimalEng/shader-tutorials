@@ -26,7 +26,7 @@ void main() {
 
   // note: draw circle sdf
   float radius = 2.5;
-  float radius = 3.0;
+  // radius = 3.0;
   vec2 center = vec2(0.0, 0.0);
   // center = vec2(sin(2.0 * u_time), 0.0);
   float distanceToCircle = sdfCircle(uv - center, radius);

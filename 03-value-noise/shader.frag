@@ -46,9 +46,9 @@ float valueNoiseFn(vec2 uv) {
 
 void main() {
   vec2 uv = gl_FragCoord.xy / u_resolution;
-  // uv = gl_FragCoord.xy / u_resolution.y;
+  uv = gl_FragCoord.xy / u_resolution.y;
 
-  vec3 color = vec3(0.0);
+  vec3 color = vec3(1.0);
 
   // part 1 - create white noise function
   // color = vec3(whiteNoise2x1(uv));
@@ -87,11 +87,14 @@ void main() {
   // color = vec3(valueNoise);
 
   // part 5 - add layers (a.k.a octaves) of value noise
-  // float vn = valueNoiseFn(uv * 4.0) * 0.5;
-  // vn += valueNoiseFn(uv * 8.0) * 0.25;
-  // vn += valueNoiseFn(uv * 16.0) * 0.125;
-  // vn += valueNoiseFn(uv * 32.0) * 0.0625;
-  // color = vec3(vn);
+  uv += u_time / 10.0;
+  float vn = valueNoiseFn(uv * 4.0) * 1.0;
+  vn += valueNoiseFn(uv * 8.0) * 0.5;
+  vn += valueNoiseFn(uv * 16.0) * 0.25;
+  vn += valueNoiseFn(uv * 32.0) * 0.125;
+  vn += valueNoiseFn(uv * 64.0) * 0.0625;
+  vn /= 2.0;
+  color = vec3(vn);
 
   gl_FragColor = vec4(color, 1.0);
 }

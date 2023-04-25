@@ -16,7 +16,7 @@ float whiteNoise2x1(vec2 p) {
 
   // return fract(p.x * p.y * 1000.0123);
 
-  // generic noise function
+  // generic noise function - replace with something better
   // float random = dot(p, vec2(12.9898, 78.233));
   float random = dot(p, vec2(12., 78.));
   random = sin(random);
@@ -25,7 +25,7 @@ float whiteNoise2x1(vec2 p) {
   return random;
 }
 
-float valueNoise(vec2 uv) {
+float valueNoiseFn(vec2 uv) {
   vec2 gridUv = fract(uv);
   vec2 gridId = floor(uv);
 
@@ -51,14 +51,14 @@ void main() {
   vec3 color = vec3(0.0);
 
   // part 1 - create white noise function
-  color = vec3(whiteNoise2x1(uv));
+  // color = vec3(whiteNoise2x1(uv));
 
   // part 2.1 - add hidden grid overlay
   // uv = uv * 2.0;
   // uv = uv * 4.0;
   // uv = uv * 8.0;
-  vec2 gridUv = fract(uv);
-  color = vec3(gridUv, 0.0);
+  // vec2 gridUv = fract(uv);
+  // color = vec3(gridUv, 0.0);
 
   // part 2.2 - set up grid ids
   // vec2 gridId = floor(uv);
@@ -87,11 +87,11 @@ void main() {
   // color = vec3(valueNoise);
 
   // part 5 - add layers (a.k.a octaves) of value noise
-  // float noise = valueNoise(uv * 4.0) * 0.5;
-  // noise += valueNoise(uv * 8.0) * 0.25;
-  // noise += valueNoise(uv * 16.0) * 0.125;
-  // noise += valueNoise(uv * 32.0) * 0.0625;
-  // color = vec3(noise);
+  // float vn = valueNoiseFn(uv * 4.0) * 0.5;
+  // vn += valueNoiseFn(uv * 8.0) * 0.25;
+  // vn += valueNoiseFn(uv * 16.0) * 0.125;
+  // vn += valueNoiseFn(uv * 32.0) * 0.0625;
+  // color = vec3(vn);
 
   gl_FragColor = vec4(color, 1.0);
 }

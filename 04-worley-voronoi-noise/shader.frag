@@ -20,7 +20,7 @@ void main() {
   vec3 color = vec3(0.0);
 
   // part 1.1 - set up the grid
-  uv = uv * 5.0;
+  uv = uv * 8.0;
   vec2 currentGridId = floor(uv);
   vec2 currentGridCoord = fract(uv);
   color = vec3(currentGridCoord, 0.0);
@@ -72,7 +72,8 @@ void main() {
   color = vec3(smoothstep(0.0, 1.0, minDistFromPixel));
   // display clouds
   color = vec3(smoothstep(0.0, 1.0, 1.0 - minDistFromPixel));
-  color = vec3(smoothstep(0.2, 1.0, 1.0 - minDistFromPixel));
+  // clouds with dots
+  // color = vec3(smoothstep(0.2, 1.0, 1.0 - minDistFromPixel)) - pointsOnGridColor;
 
   // part 5 - final color
   // if (uv.x > 4.745) {

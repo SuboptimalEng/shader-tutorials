@@ -50,7 +50,7 @@ void main() {
       vec2 adjGridCoords = vec2(i, j);
       vec2 pointOnAdjGrid = adjGridCoords;
 
-      // part 3 - vary the points based on time + noise
+      // part 3.1 - vary the points based on time + noise
       // pointOnAdjGrid = adjGridCoords + sin(u_time) * 0.5;
       vec2 noise = noise2x2(currentGridId + adjGridCoords);
       pointOnAdjGrid = adjGridCoords + sin(u_time * noise) * 0.5;
@@ -64,22 +64,21 @@ void main() {
 
   // part 2.2 - draw white points on grid for reference
   vec3 pointsOnGridColor = vec3(pointsOnGrid);
-  // color = redGridColor + pointsOnGridColor;
-  // color = redGridColor + pointsOnGridColor + minDistFromPixel;
-  // color = redGridColor + minDistFromPixel;
-  // color = vec3(minDistFromPixel);
+  color = redGridColor + pointsOnGridColor;
+  color = redGridColor + pointsOnGridColor + minDistFromPixel;
+  color = redGridColor + minDistFromPixel;
+
+  // part 3.2 - display voronoi noise
+  color = vec3(minDistFromPixel);
   color = vec3(smoothstep(0.0, 1.0, minDistFromPixel));
 
-  // part 3 - display voronoi noise + clouds
-  // color = vec3(smoothstep(0.0, 1.0, minDistFromPixel));
+  // part 3.3 - display clouds
+  color = vec3(smoothstep(0.25, 1.0, 1.0 - minDistFromPixel));
 
-  // display clouds
-  // color = vec3(smoothstep(0.25, 1.0, 1.0 - minDistFromPixel));
+  // part 3.4 - display clouds with dots
+  color = vec3(smoothstep(0.2, 1.0, 1.0 - minDistFromPixel)) - pointsOnGridColor;
 
-  // clouds with dots
-  // color = vec3(smoothstep(0.2, 1.0, 1.0 - minDistFromPixel)) - pointsOnGridColor;
-
-  // part 5 - final color
+  // part 4 - create display for final section
   // if (uv.x > 4.745) {
   //   color = pointsOnGridColor + vec3(smoothstep(0.0, 1.0, minDistFromPixel));
   // } else {

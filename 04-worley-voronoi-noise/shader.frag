@@ -15,11 +15,12 @@ vec2 noise2x2(vec2 p) {
 
 void main() {
   vec2 uv = gl_FragCoord.xy / u_resolution;
-  // uv = gl_FragCoord.xy / u_resolution.y;
+  uv = gl_FragCoord.xy / u_resolution.y;
 
   vec3 color = vec3(0.0);
 
   // part 1.1 - set up the grid
+  // clouds thumbnail -> uv = uv * 3.0;
   uv = uv * 8.0;
   vec2 currentGridId = floor(uv);
   vec2 currentGridCoord = fract(uv);
@@ -67,11 +68,14 @@ void main() {
   // color = redGridColor + pointsOnGridColor + minDistFromPixel;
   // color = redGridColor + minDistFromPixel;
   // color = vec3(minDistFromPixel);
+  color = vec3(smoothstep(0.0, 1.0, minDistFromPixel));
 
   // part 3 - display voronoi noise + clouds
-  color = vec3(smoothstep(0.0, 1.0, minDistFromPixel));
+  // color = vec3(smoothstep(0.0, 1.0, minDistFromPixel));
+
   // display clouds
-  color = vec3(smoothstep(0.0, 1.0, 1.0 - minDistFromPixel));
+  // color = vec3(smoothstep(0.25, 1.0, 1.0 - minDistFromPixel));
+
   // clouds with dots
   // color = vec3(smoothstep(0.2, 1.0, 1.0 - minDistFromPixel)) - pointsOnGridColor;
 

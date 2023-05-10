@@ -4,19 +4,19 @@ uniform float u_time;
 uniform vec2 u_resolution;
 
 vec2 randomGradient(vec2 p) {
-  p = p + 0.01;
+  p = p + 0.02;
   float x = dot(p, vec2(123.4, 234.5));
   float y = dot(p, vec2(234.5, 345.6));
   vec2 gradient = vec2(x, y);
   gradient = sin(gradient);
   gradient = gradient * 43758.5453;
 
-  // part 5.1 - update noise function with time
+  // part 4.5 - update noise function with time
   gradient = sin(gradient + u_time);
   return gradient;
 
-  gradient = sin(gradient);
-  return gradient;
+  // gradient = sin(gradient);
+  // return gradient;
 }
 
 // inigo quilez - https://iquilezles.org/articles/distfunctions2d/
@@ -60,6 +60,7 @@ void main() {
 
   // part 1 - set up a grid of cells
   uv = uv * 4.0;
+  uv = uv * 2.0;
   vec2 gridId = floor(uv);
   vec2 gridUv = fract(uv);
   color = vec3(gridId, 0.0);
@@ -116,19 +117,19 @@ void main() {
   float perlin = mix(b, t, gridUv.y);
 
   // part 4.3 - display perlin noise
-  color = vec3(perlin + 0.25);
+  color = vec3(perlin + 0.2);
   // color = distToCircle > 0.0 ? color : white;
   // if (distG1 < 0.0 || distG2 < 0.0 || distG3 < 0.0 || distG4 < 0.0) {
   //   color = vec3(1.0);
   // }
 
-  // part 5.1 - update randomGradient function with time
+  // part 4.5 - update randomGradient function with time
 
-  // part 5.2 - billow noise
+  // part 5.1 - billow noise
   // float billow = abs(perlin);
   // color = vec3(billow);
 
-  // part 5.3 - ridged noise
+  // part 5.2 - ridged noise
   // float ridgedNoise = 1.0 - abs(perlin);
   // ridgedNoise = ridgedNoise * ridgedNoise;
   // color = vec3(ridgedNoise);

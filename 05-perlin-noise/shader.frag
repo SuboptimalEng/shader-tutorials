@@ -34,11 +34,6 @@ float sdfOrientedBox(in vec2 p, in vec2 a, in vec2 b, float th) {
   return length(max(q, 0.0)) + min(max(q.x, q.y), 0.0);
 }
 
-float distToGradient(vec2 gridId, vec2 gridUv, vec2 start, vec2 end) {
-  float distToGradient = sdfOrientedBox(gridId + gridUv, start, start + end / 2.0, 0.025);
-  return distToGradient;
-}
-
 vec2 cubic(vec2 p) {
   return p * p * (3.0 - p * 2.0);
 }

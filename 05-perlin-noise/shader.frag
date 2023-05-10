@@ -55,7 +55,6 @@ void main() {
 
   // part 1 - set up a grid of cells
   uv = uv * 4.0;
-  uv = uv * 2.0;
   vec2 gridId = floor(uv);
   vec2 gridUv = fract(uv);
   color = vec3(gridId, 0.0);

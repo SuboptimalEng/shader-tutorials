@@ -54,8 +54,8 @@ float perlinNoise(vec2 uv) {
 float fbmPerlinNoise(vec2 uv) {
   float fbmNoise = 0.0;
   float amplitude = 1.0;
-  // const float octaves = 1.0;
-  const float octaves = 2.0;
+  const float octaves = 1.0;
+  // const float octaves = 2.0;
   // const float octaves = 3.0;
   // const float octaves = 4.0;
   // const float octaves = 5.0;

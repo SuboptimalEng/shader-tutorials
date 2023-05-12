@@ -108,37 +108,37 @@ void main() {
   color = vec3(pNoise);
 
   // part 1 - fractional brownian motion
-  float fbmNoise = fbmPerlinNoise(uv);
-  color = vec3(fbmNoise);
+  // float fbmNoise = fbmPerlinNoise(uv);
+  // color = vec3(fbmNoise);
 
   // part 2 - domain warping
-  float dwNoise = domainWarpFbmPerlinNoise(uv);
-  color = vec3(dwNoise);
+  // float dwNoise = domainWarpFbmPerlinNoise(uv);
+  // color = vec3(dwNoise);
 
   // part 3.1 - central differences method
-  vec3 normal = calcNormal(uv);
+  // vec3 normal = calcNormal(uv);
 
   // part 3.2 - diffuse lighting
-  vec3 white = vec3(1.0);
-  vec3 blue = vec3(0.65, 0.85, 1.0);
-  vec3 lightColor = white;
-  lightColor = blue;
-  vec3 lightSource = vec3(1.0, 1.0, 1.0);
-  float diffuseStrength = max(0.0, dot(normal, lightSource));
-  vec3 diffuse = diffuseStrength * lightColor;
-  vec3 lighting = diffuse * 0.5;
-  color = lighting;
+  // vec3 white = vec3(1.0);
+  // vec3 blue = vec3(0.65, 0.85, 1.0);
+  // vec3 lightColor = white;
+  // lightColor = blue;
+  // vec3 lightSource = vec3(1.0, 1.0, 1.0);
+  // float diffuseStrength = max(0.0, dot(normal, lightSource));
+  // vec3 diffuse = diffuseStrength * lightColor;
+  // vec3 lighting = diffuse * 0.5;
+  // color = lighting;
 
   // part 3.3 - specular lighting
-  vec3 cameraSource = vec3(0.0, 0.0, 1.0);
-  vec3 viewSource = normalize(cameraSource);
-  vec3 reflectSource = normalize(reflect(-lightSource, normal));
-  float specularStrength = max(0.0, dot(viewSource, reflectSource));
-  specularStrength = pow(specularStrength, 32.0);
-  vec3 specular = specularStrength * lightColor;
+  // vec3 cameraSource = vec3(0.0, 0.0, 1.0);
+  // vec3 viewSource = normalize(cameraSource);
+  // vec3 reflectSource = normalize(reflect(-lightSource, normal));
+  // float specularStrength = max(0.0, dot(viewSource, reflectSource));
+  // specularStrength = pow(specularStrength, 32.0);
+  // vec3 specular = specularStrength * lightColor;
 
-  lighting = diffuse * 0.5 + specular * 0.5;
-  color = lighting;
+  // lighting = diffuse * 0.5 + specular * 0.5;
+  // color = lighting;
 
   gl_FragColor = vec4(color, 1.0);
 }

@@ -141,6 +141,8 @@ vec3 render(vec2 uv) {
 
 void main() {
   vec2 uv = 2.0 * gl_FragCoord.xy / u_resolution - 1.0;
+  // note: properly center the shader in full screen mode
+  // uv = (2.0 * gl_FragCoord.xy - u_resolution) / u_resolution.y;
   vec3 color = vec3(0.0);
   color = render(uv);
   // color = vec3(uv, 0.0);

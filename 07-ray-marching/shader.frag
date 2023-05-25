@@ -1,3 +1,10 @@
+// Helful Resources
+// ----------------
+// Ray Marching Blog Post by Michael Walczyk
+// https://michaelwalczyk.com/blog-ray-marching.html
+// Inigo Quilez SDF Functions
+// https://iquilezles.org/articles/distfunctions/
+
 precision mediump float;
 
 uniform float u_time;
@@ -76,8 +83,7 @@ vec3 getNormal(vec3 p) {
 vec3 render(vec2 uv) {
   vec3 color = vec3(0.0);
 
-  // ro -> ray origin
-  // rd -> ray direction
+  // note: ro -> ray origin, rd -> ray direction
   vec3 ro = vec3(0.0, 0.0, -2.0);
   vec3 rd = vec3(uv, 1.0);
 
@@ -93,27 +99,34 @@ vec3 render(vec2 uv) {
     vec3 normal = getNormal(p);
     color = normal;
 
-    // part 2.2 - add diffuse + specular lighting
+    // part 2.2 - add lighting
 
+    // part 2.2.1 - calculate diffuse lighting
     vec3 lightColor = vec3(1.0);
     vec3 lightSource = vec3(2.5, 2.5, -1.0);
     float diffuseStrength = max(0.0, dot(normalize(lightSource), normal));
     vec3 diffuse = lightColor * diffuseStrength;
 
+    // part 2.2.2 - calculate specular lighting
     vec3 viewSource = normalize(ro);
     vec3 reflectSource = normalize(reflect(-lightSource, normal));
     float specularStrength = max(0.0, dot(viewSource, reflectSource));
     specularStrength = pow(specularStrength, 64.0);
     vec3 specular = specularStrength * lightColor;
 
+    // part 2.2.3 - calculate lighting
     vec3 lighting = diffuse * 0.75 + specular * 0.25;
     color = lighting;
 
     // part 3 - add shadows
+
+    // part 3.1 - update the ray origin and ray direction
     vec3 lightDirection = normalize(lightSource);
     float distToLightSource = length(lightSource - p);
     ro = p + normal * 0.1;
     rd = lightDirection;
+
+    // part 3.2 - ray march based on new ro + rd
     float dist = rayMarch(ro, rd, distToLightSource);
     if (dist < distToLightSource) {
       color = color * vec3(0.25);
@@ -125,13 +138,6 @@ vec3 render(vec2 uv) {
 
   return color;
 }
-
-// Helful Resources
-// ----------------
-// Ray Marching Blog Post by Michael Walczyk
-// https://michaelwalczyk.com/blog-ray-marching.html
-// Inigo Quilez SDF Functions
-// https://iquilezles.org/articles/distfunctions/
 
 void main() {
   vec2 uv = 2.0 * gl_FragCoord.xy / u_resolution - 1.0;

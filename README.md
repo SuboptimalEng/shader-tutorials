@@ -6,19 +6,26 @@ The code for my shader tutorials on YouTube.
 
 - [How to Write GLSL Shaders in VS Code](https://www.youtube.com/watch?v=7UvpTTEE1Hs)
   <img src="/_thumbnails/glsl_00.png">
-- [Phong Lighting](https://www.youtube.com/watch?v=LKXAIuCaKAQ)
+
+- [Intro to Phong Lighting](https://www.youtube.com/watch?v=LKXAIuCaKAQ)
   <img src="/_thumbnails/glsl_01.png">
-- [Signed Distance Fields](https://www.youtube.com/watch?v=pEdlZ9W2Xs0)
+
+- [Intro to Signed Distance Fields](https://www.youtube.com/watch?v=pEdlZ9W2Xs0)
   <img src="/_thumbnails/glsl_02.png">
-- [Value Noise](https://www.youtube.com/watch?v=KllOFoUnKhU)
+
+- [Value Noise Explained](https://www.youtube.com/watch?v=KllOFoUnKhU)
   <img src="/_thumbnails/glsl_03.png">
-- [Worley and Voronoi Noise](https://www.youtube.com/watch?v=vcfIJ5Uu6Qw)
+
+- [Worley and Voronoi Noise Explained](https://www.youtube.com/watch?v=vcfIJ5Uu6Qw)
   <img src="/_thumbnails/glsl_04.png">
-- [Perlin Noise](https://www.youtube.com/watch?v=7fd331zsie0)
+
+- [Perlin Noise Explained](https://www.youtube.com/watch?v=7fd331zsie0)
   <img src="/_thumbnails/glsl_05.png">
-- [FBM, Domain Warping, Calculate Normal](https://www.youtube.com/watch?v=cWiLGZPwXCs)
+
+- [More Noise Functions: FBM, Domain Warping, Normals](https://www.youtube.com/watch?v=cWiLGZPwXCs)
   <img src="/_thumbnails/glsl_06.png">
-- [Ray Marching](https://www.youtube.com/watch?v=TSAIR03FPfY)
+
+- [Intro to Ray Marching](https://www.youtube.com/watch?v=TSAIR03FPfY)
   <img src="/_thumbnails/glsl_07.png">
 
 ## Resources

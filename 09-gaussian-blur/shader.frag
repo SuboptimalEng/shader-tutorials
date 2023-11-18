@@ -18,9 +18,8 @@ void main() {
   vec4 texture = texture2D(u_texture_0, uv);
   color = texture.rgb;
 
-  // vec2 imageResolution = vec2(100, 100);
-  // vec2 imageResolution = vec2(2832, 2744);
-  vec2 imageResolution = vec2(283.2, 274.4);
+  vec2 imageResolution = vec2(2832, 2744);
+  imageResolution = imageResolution / 10.0;
   vec2 texelSize = 1.0 / imageResolution;
 
   // const float kernelSize = 0.0;

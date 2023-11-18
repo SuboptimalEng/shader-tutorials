@@ -5,7 +5,7 @@ uniform sampler2D u_texture_0;
 
 void main() {
   vec2 uv = gl_FragCoord.xy / u_resolution;
-  // uv.x = uv.x * u_resolution.x / u_resolution.y;
+  uv.x = uv.x * u_resolution.x / u_resolution.y;
 
   vec3 color = vec3(0.0);
   color = vec3(uv, 0.0);

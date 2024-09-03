@@ -7,11 +7,11 @@ The code for my shader tutorials on YouTube.
 - [How to Write GLSL Shaders in VS Code](https://www.youtube.com/watch?v=7UvpTTEE1Hs)
 - [Intro to Phong Lighting](https://www.youtube.com/watch?v=LKXAIuCaKAQ)
 - [Intro to Signed Distance Fields](https://www.youtube.com/watch?v=pEdlZ9W2Xs0)
-- [Value Noise Explained](https://www.youtube.com/watch?v=KllOFoUnKhU)
-- [Worley and Voronoi Noise Explained](https://www.youtube.com/watch?v=vcfIJ5Uu6Qw)
-- [Perlin Noise Explained](https://www.youtube.com/watch?v=7fd331zsie0)
+- [What is Value Noise?](https://www.youtube.com/watch?v=KllOFoUnKhU)
+- [What is Voronoi Noise?](https://www.youtube.com/watch?v=vcfIJ5Uu6Qw)
+- [What is Perlin Noise?](https://www.youtube.com/watch?v=7fd331zsie0)
 - [More Noise Functions: FBM, Domain Warping, Normals](https://www.youtube.com/watch?v=cWiLGZPwXCs)
-- [Intro to Ray Marching](https://www.youtube.com/watch?v=TSAIR03FPfY)
+- [What is Ray Marching?](https://www.youtube.com/watch?v=TSAIR03FPfY)
 
 ## Helpful Resources
 

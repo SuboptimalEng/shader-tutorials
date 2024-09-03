@@ -32,7 +32,3 @@ The code for my shader tutorials on YouTube.
 - Websites
 
   - [Shadertoy](https://www.shadertoy.com/)
-
-- Courses
-
-  - [Simon Dev's GLSL Shaders from Scratch Course](https://simondev.teachable.com/)

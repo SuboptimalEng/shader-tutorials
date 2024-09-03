@@ -2,7 +2,7 @@
 
 The code for my shader tutorials on YouTube.
 
-## Videos
+## YouTube Videos
 
 - [How to Write GLSL Shaders in VS Code](https://www.youtube.com/watch?v=7UvpTTEE1Hs)
 - [Intro to Phong Lighting](https://www.youtube.com/watch?v=LKXAIuCaKAQ)
@@ -13,7 +13,7 @@ The code for my shader tutorials on YouTube.
 - [More Noise Functions: FBM, Domain Warping, Normals](https://www.youtube.com/watch?v=cWiLGZPwXCs)
 - [Intro to Ray Marching](https://www.youtube.com/watch?v=TSAIR03FPfY)
 
-## Resources
+## Helpful Resources
 
 - Tutorials
 

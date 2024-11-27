@@ -24,6 +24,7 @@ vec3 BLACK = vec3(0.0);
 vec3 WHITE = vec3(1.0);
 vec3 RED = vec3(1.0, 0.0, 0.0);
 vec3 MAGENTA = vec3(1.0, 0.0, 1.0);
+vec3 GREEN = vec3(0.0, 1.0, 0.0);
 
 // uniforms
 uniform float u_time;
@@ -112,7 +113,7 @@ void main() {
     td += d;
   }
 
-  vec3 color = MAGENTA;
+  vec3 color = GREEN;
   if (td < MAX_DIST) {
     vec3 p = ro + rd * td;
     n = calcNormal(p);
@@ -121,11 +122,11 @@ void main() {
 
   // uncomment each one to see different color styles
   // color = vec3(td * 0.05);
-  color = steps < 80.0 ? pow(vec3(steps * 0.01) * color, vec3(0.25)) : pow(color * steps * 0.1, vec3(0.1));
+  // color = steps < 80.0 ? pow(vec3(steps * 0.01) * color, vec3(0.25)) : pow(color * steps * 0.1, vec3(0.1));
   // color = pow(vec3(steps * 0.01) * color * steps, vec3(0.125));
   // color = td < 100.0 ? pow(vec3(steps * 0.01), vec3(0.25)) : color * steps * 0.01;
   // color = td < 100.0 ? pow(vec3(steps * 0.01) * color, vec3(0.125)) : color * steps * 0.01;
-  // color = td < 100.0 ? pow(vec3(steps * 0.01), vec3(0.25)) * n : color * steps * 0.01;
+  color = td < 100.0 ? pow(vec3(steps * 0.01), vec3(0.25)) * n : color * steps * 0.01;
 
   // add gamma correction
   color = pow(color, vec3(1.0 / 2.2));

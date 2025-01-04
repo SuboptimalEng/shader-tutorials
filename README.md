@@ -6,11 +6,11 @@ The code for my shader tutorials on YouTube.
 
 ### 0. Intro to Shaders
 
-<img src="_thumbnails/glsl_00.png" alt="Alt Text" width="300" />
+<img src="_thumbnails/glsl_00.png" />
 
 ### 1. Phong Lighting
 
-<img src="_thumbnails/glsl_01.png" alt="Alt Text" width="300" />
+<img src="_thumbnails/glsl_01.png" />
 
 ### 2. Circle SDF
 

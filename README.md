@@ -14,19 +14,39 @@ The code for my shader tutorials on YouTube.
 
 ### 2. Circle SDF
 
+<img src="_thumbnails/glsl_02.png" />
+
 ### 3. Value Noise
+
+<img src="_thumbnails/glsl_03.png" />
 
 ### 4. Voronoi Noise
 
+<img src="_thumbnails/glsl_04.png" />
+
 ### 5. Perlin Noise
+
+<img src="_thumbnails/glsl_05.png" />
 
 ### 6. FBM, Domain Warping, Normals
 
+<img src="_thumbnails/glsl_06.png" />
+
 ### 7. Ray Marching
+
+<img src="_thumbnails/glsl_07.png" />
 
 ### 8. Checkerboard
 
+- todo: add image
+
 ### 9. Gaussian Blur
+
+- todo: add image
+
+### 10. Piano
+
+- todo: add image
 
 ## Helpful Resources
 

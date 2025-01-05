@@ -5,11 +5,11 @@
 
 ## Tutorials
 
-#### 0. Intro to Shaders
+### 0. Intro to Shaders
 
 <img src="_thumbnails/glsl_00.png" />
 
-#### 1. Phong Lighting
+### 1. Phong Lighting
 
 <img src="_thumbnails/glsl_01.png" />
 

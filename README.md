@@ -2,8 +2,6 @@
 
 The code for my shader tutorials on YouTube.
 
-## Tutorials
-
 ### 0. Intro to Shaders
 
 <img src="_thumbnails/glsl_00.png" />

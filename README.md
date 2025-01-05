@@ -3,11 +3,13 @@
 - This repo contains the code for my shader tutorials on YouTube
 - Playlist with 10+ Videos: [YouTube](https://www.youtube.com/watch?v=7UvpTTEE1Hs&list=PLTJ_bWjv6i7xnDaPMrbx69zVu82sVails&pp=gAQB)
 
-### 0. Intro to Shaders
+## Tutorials
+
+#### 0. Intro to Shaders
 
 <img src="_thumbnails/glsl_00.png" />
 
-### 1. Phong Lighting
+#### 1. Phong Lighting
 
 <img src="_thumbnails/glsl_01.png" />
 
